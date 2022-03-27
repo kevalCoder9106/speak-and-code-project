@@ -32,6 +32,8 @@ const App = () => {
         "versionIndex":"0"
       }
     })
+    .then(resp => resp.json())
+    .then(console.log)
   }
 
   return(

@@ -3,11 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import express from 'express'
-import cors from 'cors'
-
-const app = express()
-app.use('json')
 
 ReactDOM.render(
   <React.StrictMode>
