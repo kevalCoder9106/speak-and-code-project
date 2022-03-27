@@ -1,0 +1,20 @@
+*{
+  margin: 0px;
+}
+
+.background{
+  width: 100vw; height: 100vh;
+}
+
+.font-mono{
+  font-family: 'Roboto Mono', monospace;
+}
+.font-lobster{
+  font-family: 'Lobster', cursive;
+  font-family: 'Satisfy', cursive;
+}
+
+.border{
+  height: .2%;
+  background-color: #2E2E2E;
+}

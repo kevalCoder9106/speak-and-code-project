@@ -1,0 +1,21 @@
+.header-container{
+    height: 7%;
+    width: 100%;
+    box-shadow: 5px 5px 11px black;
+    background-color: #5D62FF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.header-container > .title{
+    font-size: 40px;
+    color: black;
+}
+
+.header-container > .title, .header-container > .lang{
+    font-weight: 200;
+    margin: 0px 10px;
+}

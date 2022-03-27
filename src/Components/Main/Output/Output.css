@@ -1,0 +1,19 @@
+.output-container{
+    margin: 10px;
+    padding: 10px;
+    width: 40%;
+    height: 50%;
+    font-size: 20px;
+    font-weight: 200;
+    background-color: #6D85FF;
+    border: none;
+    border-style: none;
+    border-radius: 11px 4px 11px;
+    resize: none;
+    color: white;
+    box-shadow: inset 1px 1px 4px black;
+}
+
+.output-container > h3{
+    font-weight: 200;
+}
