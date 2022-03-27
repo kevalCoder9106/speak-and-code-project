@@ -8,6 +8,8 @@ const WelcomePage = (props) => {
                 <select name='lang' className='font-mono lang-list'>
                     <option value='c'>C</option>
                     <option value='java>'>Java</option>
+                    <option value='python'>Python</option>
+                    <option value='cpp'>C++</option>
                 </select>
                 <button onClick={() => props.updateRoute('home')} className='font-mono'>{'Next'}</button>
             </div>

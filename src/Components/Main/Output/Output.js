@@ -1,9 +1,9 @@
 import './Output.css'
 
-const Output = () => {
+const Output = (props) => {
     return(
         <div className='font-mono output-container'>
-            <h3>Output</h3>
+            <h3>{props.title}</h3>
         </div>
     )
 }

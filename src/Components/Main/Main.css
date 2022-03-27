@@ -30,3 +30,14 @@
 .main-container > .run-button > button:active{
     transform: scale(.9);
 }
+
+.main-container > .io-container{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+}
+
+.main-container > .io-container > *{
+    height: 80%;
+}
