@@ -8,7 +8,7 @@ const Home = (props) => {
         <div className='home-container'>
             <Header/>
             <div className='border'></div>
-            <Main run={props.run} updateCode={props.updateCode} code={props.code}/>
+            <Main run={props.run} updateCode={props.updateCode} code={props.code} output={props.output}/>
         </div>
     )
 }

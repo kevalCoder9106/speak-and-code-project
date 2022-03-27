@@ -1,5 +1,4 @@
 import { useState,useEffect } from 'react'
-import { findRenderedComponentWithType } from 'react-dom/test-utils'
 import './Editor.css'
 
 const Editor = (props) => {
@@ -42,16 +41,15 @@ const Editor = (props) => {
 
         if (words[0] === 'print' || words[0] === 'Print'){
             for (let i = 0; i < words.length; i++){
-                if (i != 0){
+                if (i !== 0){
                     code += words[i] + " "
                 }
             }
             code += '");'
             return code
         }
-        else if (words[0] == 'Loop' && words[1] == 'till'){
+        else if (words[0] === 'Loop' && words[1] === 'till'){
             const a = confNum(words[2])
-            const msg = words[5]
 
             code = 'for(int i = 0; i <= ' + a + '; i++){\n\tprintf("'
 

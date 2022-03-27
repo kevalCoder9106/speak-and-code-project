@@ -1,6 +1,7 @@
 import './WelcomePage.css'
 
 const WelcomePage = (props) => {
+    
     return(
         <div className='welcome-container'> 
             <div className='content'>

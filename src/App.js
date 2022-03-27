@@ -6,34 +6,31 @@ import WelcomePage from './Pages/WelcomePage/WelcomePage'
 const App = () => {
   const [route,changeRoute] = useState('welcome')
   const [code,updateCode] = useState()
-  
-  const addCode = (codeLine) => {
-    updateCode(prev => {
-      return [...prev,codeLine]
-    })
-  }
-  
+  const [output,updateOutput] = useState('Output')
 
+  
   // Changing route (only welcome page -> home page)
   const updateRoute = (routeValue) => {
     changeRoute(routeValue)
   }
   
   // Run code
-  const run = (code) => {
-    fetch('https://api.jdoodle.com/v1/execute',{
+  const run = (_code) => {
+    const data = {
+      userCode: _code
+    }
+
+    fetch('http://localhost:300/send_code',{
       method:'post',
-      headers: {'Content-Type':'application/json'},
-      body:{
-        "clientId":"b0de483f2601a3192c69ada558952f35",
-        "clientSecret":"ec0e806991051fdc52bceae3311ba75367868d989a0d1f23ad1d90c3d6ce2337",
-        "script":code,
-        "language":"C",
-        "versionIndex":"0"
-      }
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(data)
     })
     .then(resp => resp.json())
-    .then(console.log)
+    .then(result => {
+      result = result.output.split("\n")[0]
+      updateOutput(result)
+    })
+    .catch(err => console.log(err))
   }
 
   return(
@@ -41,7 +38,7 @@ const App = () => {
       {
         route === 'home'
         ?
-          <Home run={run} updateCode={updateCode} code={code}/>
+          <Home run={run} updateCode={updateCode} code={code} output={output}/>
         :
           <WelcomePage updateRoute={updateRoute}/>
       }
@@ -49,4 +46,4 @@ const App = () => {
   )
 } 
 
-export default App;
+export default App

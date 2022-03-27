@@ -12,9 +12,9 @@ const Main = (props) => {
             <div className='run-button'>
                 <button onClick={run}>Run</button>
             </div>
-            <div className='io-container'>
-                <Output title='Input'/>
-                <Output title='Output'/>
+            <div>
+                <Output/>
+                <Output/>
             </div>
         </div>
     )
